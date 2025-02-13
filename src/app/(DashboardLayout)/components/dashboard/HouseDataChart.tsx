@@ -35,7 +35,7 @@ const HouseDataChart: React.FC<HouseDataChartProps> = ({ data = [] }) => {
       fontFamily: "'Plus Jakarta Sans', sans-serif",
       foreColor: '#adb0bb',
       toolbar: { show: true },
-      height: 370,
+      height: 427,
     },
     colors: [theme.palette.primary.main, theme.palette.secondary.main, '#FF5733', '#33FF57'],
     plotOptions: {
@@ -87,7 +87,7 @@ const HouseDataChart: React.FC<HouseDataChartProps> = ({ data = [] }) => {
     <DashboardCard title="House Data">
       <Box>
         {hasData ? (
-          <Chart options={chartOptions} series={chartSeries} type="bar" width="100%" height="370px" />
+          <Chart options={chartOptions} series={chartSeries} type="bar" width="100%" height="426px" />
         ) : (
           <Typography align="center" color="textSecondary">
             No house data available.

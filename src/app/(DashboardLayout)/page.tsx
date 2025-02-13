@@ -9,9 +9,10 @@ import TrafficDistribution from '@/app/(DashboardLayout)/components/dashboard/Tr
 import UpcomingSchedules from '@/app/(DashboardLayout)/components/dashboard/UpcomingSchedules';
 import TopPayingClients from '@/app/(DashboardLayout)/components/dashboard/TopPayingClients';
 import ActiveTenants from '@/app/(DashboardLayout)/components/dashboard/ActiveTenants'
+import TenantStats from '@/app/(DashboardLayout)/components/dashboard/TenantStats'
 import Blog from '@/app/(DashboardLayout)/components/dashboard/Blog';
 import ProductSales from '@/app/(DashboardLayout)/components/dashboard/ProductSales';
-import { fetchHouses } from '../services/houseService';
+import { fetchHouses }  from '@/app/services/houseService';
 
 const Dashboard = () => {
   const [houseData, setHouseData] = useState<any>(null);
@@ -126,7 +127,7 @@ const Dashboard = () => {
                 <ActiveTenants tenantData={dummyTenantData} />
               </Grid>
               <Grid item xs={12}>
-                <ProductSales />
+                <TenantStats tenantData={dummyTenantData}  />
               </Grid>
             </Grid>
           </Grid>
