@@ -5,7 +5,7 @@ const HOUSE_API_URL: string = `${BASE_URL}/house`;
 
 // Function to get the token from localStorage
 const getAuthToken = (): string | null => {
-  return localStorage.getItem('authToken'); // Retrieves the stored token
+  return localStorage.getItem('token'); // Retrieves the stored token
 };
 
 // Create an axios instance to add the Authorization header for each request

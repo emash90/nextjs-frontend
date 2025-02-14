@@ -6,6 +6,12 @@ import {
   IconMoodHappy,
   IconTypography,
   IconUserPlus,
+  IconLogout,
+  IconHome2,
+  IconUsers,
+  IconReportMoney,
+  IconMoneybag,
+  IconCashBanknote
 } from "@tabler/icons-react";
 
 import { uniqueId } from "lodash";
@@ -24,25 +30,31 @@ const Menuitems = [
   },
   {
     navlabel: true,
-    subheader: "Utilities",
+    subheader: "Pages",
   },
   {
     id: uniqueId(),
     title: "Houses",
-    icon: IconTypography,
+    icon: IconHome2,
     href: "/houses",
   },
   {
     id: uniqueId(),
     title: "Tenants",
-    icon: IconCopy,
+    icon: IconUsers,
     href: "/tenants",
   },
   {
     id: uniqueId(),
     title: "Payments",
-    icon: IconCopy,
+    icon: IconCashBanknote,
     href: "/payments",
+  },
+  {
+    id: uniqueId(),
+    title: "Reports",
+    icon: IconReportMoney,
+    href: "/reports",
   },
   {
     navlabel: true,
@@ -50,31 +62,9 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: "Login",
-    icon: IconLogin,
+    title: "Logout",
+    icon: IconLogout,
     href: "/authentication/login",
-  },
-  {
-    id: uniqueId(),
-    title: "Register",
-    icon: IconUserPlus,
-    href: "/authentication/register",
-  },
-  {
-    navlabel: true,
-    subheader: "Extra",
-  },
-  {
-    id: uniqueId(),
-    title: "Icons",
-    icon: IconMoodHappy,
-    href: "/icons",
-  },
-  {
-    id: uniqueId(),
-    title: "Sample Page",
-    icon: IconAperture,
-    href: "/sample-page",
   },
 ];
 

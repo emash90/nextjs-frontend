@@ -6,6 +6,7 @@ import { Typography } from '@mui/material';
 import PageContainer from '@/app/(DashboardLayout)/components/container/PageContainer';
 import DashboardCard from '@/app/(DashboardLayout)/components/shared/DashboardCard';
 import ListHouses from '@/app/(DashboardLayout)/houses/components/ListHouses';
+import {fetchHouses } from '@/services/houseService'
 
 interface House {
   _id: string;
@@ -20,17 +21,17 @@ const House: React.FC = () => {
 
   // Fetch houses from API
   useEffect(() => {
-    const fetchHouses = async () => {
+    const fetchAllHouses = async () => {
       try {
-        const response = await fetch("/api/houses");
-        const data = await response.json();
+        const data = await fetchHouses()
+        console.log("data ==>", data)
         setHouses(data);
       } catch (error) {
         console.error("Failed to fetch houses:", error);
       }
     };
 
-    fetchHouses();
+    fetchAllHouses();
   }, []);
 
   const dummyHouseData = [
@@ -69,10 +70,10 @@ const House: React.FC = () => {
     },
   ];
   return (
-    <PageContainer title="Sample Page" description="this is Sample page">
+    <PageContainer title="Houses" description="manage all houses">
       <DashboardCard>
         <Typography>
-          <ListHouses houses={dummyHouseData} setHouses={setHouses} />
+          <ListHouses houses={houses} setHouses={setHouses} />
         </Typography>
       </DashboardCard>
     </PageContainer>

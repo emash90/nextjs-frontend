@@ -12,7 +12,7 @@ import ActiveTenants from '@/app/(DashboardLayout)/components/dashboard/ActiveTe
 import TenantStats from '@/app/(DashboardLayout)/components/dashboard/TenantStats'
 import Blog from '@/app/(DashboardLayout)/components/dashboard/Blog';
 import ProductSales from '@/app/(DashboardLayout)/components/dashboard/ProductSales';
-import { fetchHouses }  from '@/app/services/houseService';
+import { fetchHouses }  from '@/services/houseService';
 
 const Dashboard = () => {
   const [houseData, setHouseData] = useState<any>(null);

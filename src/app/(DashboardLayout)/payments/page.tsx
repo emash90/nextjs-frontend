@@ -5,7 +5,7 @@ import DashboardCard from '@/app/(DashboardLayout)/components/shared/DashboardCa
 
 const Payment: React.FC = () => {
   return (
-    <PageContainer title="Sample Page" description="this is Sample page">
+    <PageContainer title="Payments" description="this is the payments page">
       <DashboardCard title="Payments Page">
         <Typography>This is the payments page</Typography>
       </DashboardCard>

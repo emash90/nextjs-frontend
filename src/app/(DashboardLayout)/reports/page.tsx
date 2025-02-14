@@ -4,7 +4,7 @@ import DashboardCard from '@/app/(DashboardLayout)/components/shared/DashboardCa
 
 const Report: React.FC = () => {
   return (
-    <PageContainer title="Sample Page" description="this is Sample page">
+    <PageContainer title="Reports" description="this is the reports page">
       <DashboardCard title="Reports Page">
         <Typography>This is the reports page</Typography>
       </DashboardCard>
